@@ -102,7 +102,7 @@ uid: taipeirioter
 uidNumber: 4000
 gidNumber: 3000
 ludouCredit: 100
-userPassword: $whkey
+userPassword: $wgkey
 sshPublicKey: $takey
 loginShell: /bin/bash
 homeDirectory: /home/taipeirioter
