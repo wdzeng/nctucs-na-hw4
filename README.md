@@ -8,7 +8,7 @@ You must have A records pointting to ldap1.0716xxx.nasa and ws1.0716xxx.nasa; ot
 
 ```
 cd ~/nahw4
-sudo /ldap1.sh <student_id> <wireguard_key>
+sudo ./ldap1.sh <student_id> <wireguard_key>
 ```
 
 If you already prepare your key and certificate, put them at /nahw4/.ldap.key.pem and /nahw4/.ldap.cert.pem. 
@@ -21,5 +21,12 @@ You must have A records pointting to ldap1.0716xxx.nasa, ws1.0716xxx.nasa and ce
 
 ```
 cd ~/nahw4
-sudo /ws1.sh <student_id> <wireguard_key>
+sudo ./ws1.sh <student_id> <wireguard_key>
+```
+
+## Clean
+If for some reason you fail and you want to rerun the scirpt, you should clean your environment.
+```
+cd ~/nahw4
+sudo ./clean.sh <student_id>
 ```
