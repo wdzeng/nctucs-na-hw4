@@ -11,7 +11,7 @@ if [[ ! -f /etc/ssl/certs/ldap.pem ]]; then
     >&2 echo 'Please publish your cert firet. Byebye.'
     exit 1;
   fi
-  printf $cacert > /etc/ssl/certs/ldap.pem
+  printf "$cacert" > /etc/ssl/certs/ldap.pem
 fi
 
 

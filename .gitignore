@@ -1,3 +1,4 @@
 test*
 *.backup
 *.pem
+totppasswd.sh
