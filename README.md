@@ -25,7 +25,7 @@ sudo ./ws1.sh <student_id> <wireguard_key>
 ```
 
 ## Clean
-If for some reason you fail and you want to rerun the scirpt, you should clean your environment.
+If for some reason you fail and you want to rerun the scirpt, you should clean your environment before retrying.
 ```
 cd ~/nahw4
 sudo ./clean.sh <student_id>
