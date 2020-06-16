@@ -6,8 +6,8 @@ if [[ $(whoami) != 'root' ]]; then
   exit 1
 fi
 
-if [[ $# -eq 0 ]]; then
-  echo 'script.sh <student_id> '
+if [[ $# -ne 1 ]]; then
+  echo 'script.sh <student_id>'
   exit 0
 fi
 
