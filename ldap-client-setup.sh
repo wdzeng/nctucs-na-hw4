@@ -6,7 +6,7 @@ wgkey=$2
 pswd=$sid
 
 if [[ ! -f /etc/ssl/certs/ldap.pem ]]; then
-  cacert=$(dig TXT +short cert.0716023.nasa | sed 's/"//g' | sed 's/\s//g' | base64 -d)
+  cacert=$(dig TXT +short cert.$sid.nasa @ns1.$sid.nasa | sed 's/"//g' | sed 's/\s//g' | base64 -d)
   if [[ -z $cacert ]]; then
     >&2 echo 'Please publish your cert firet. Byebye.'
     exit 1;
@@ -71,7 +71,7 @@ EOF
 
 cat > /etc/ldap-key-auth.sh <<EOF
 #!/bin/sh
-ldapsearch -H ldap://ldap1.0716023.nasa -b dc=0716023,dc=nasa -D cn=0716023,ou=People,dc=0716023,dc=nasa -w 0716023 '(&(objectClass=posixAccount)(uid='"TA"')(ludoucredit>=1))' 'sshPublicKey' | awk '/^sshPublicKey/{\$1=""; p=1} /^$/{p=0} {printf p?\$0:""}' | sed 's/ //g' | base64 -d
+ldapsearch -H ldap://ldap1.$sid.nasa -b dc=$sid,dc=nasa -D cn=$sid,ou=People,dc=$sid,dc=nasa -w $sid '(&(objectClass=posixAccount)(uid='"TA"')(ludoucredit>=1))' 'sshPublicKey' | awk '/^sshPublicKey/{\$1=""; p=1} /^$/{p=0} {printf p?\$0:""}' | sed 's/ //g' | base64 -d
 EOF
 chmod +x /etc/ldap-key-auth.sh
 cp -f sshd_config /etc/ssh/sshd_config
