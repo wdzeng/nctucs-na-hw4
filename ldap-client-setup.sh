@@ -77,6 +77,5 @@ chmod +x /etc/ldap-key-auth.sh
 cp -f sshd_config /etc/ssh/sshd_config
 
 systemctl enable nslcd nscd
-systemctl restart sshd
-systemctl start  nslcd nscd
+systemctl restart sshd nslcd nscd
 
