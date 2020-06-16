@@ -17,7 +17,7 @@ The script will use your certificate or else it generates a new one. If the scri
 If you are not running this script for the first time, the script uses the the cert generated at the first run.
 
 ## ws1 setup
-You must have A records pointting to ldap1.0716xxx.nasa, ws1.0716xxx.nasa and cert.0716023.nasa; otherwise you cannot run this script.
+You must have A records pointting to ldap1.0716xxx.nasa, ws1.0716xxx.nasa and cert.0716xxx.nasa; otherwise you cannot run this script.
 
 ```
 cd ~/nahw4
