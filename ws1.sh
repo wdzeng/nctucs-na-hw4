@@ -8,7 +8,7 @@ fi
 
 if [[ $# -ne 1 ]]; then
   echo 'script.sh <student_id>'
-  exit 0
+  exit 1
 fi
 
 sid=$1
