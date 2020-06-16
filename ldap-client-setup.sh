@@ -71,7 +71,7 @@ EOF
 
 cat > /etc/ldap-key-auth.sh <<EOF
 #!/bin/sh
-ldapsearch -H ldap://ldap1.$sid.nasa -b dc=$sid,dc=nasa -D cn=$sid,ou=People,dc=$sid,dc=nasa -w $sid '(&(objectClass=posixAccount)(uid='"\$1"')(ludoucredit>=1))' 'sshPublicKey' | awk '/^sshPublicKey/{\$1=""; p=1} /^$/{p=0} {printf p?\$0:""}' | sed 's/ //g' | base64 -d
+ldapsearch -H ldap://ldap1.$sid.nasa -b dc=$sid,dc=nasa -D cn=$sid,ou=People,dc=$sid,dc=nasa -w $sid '(&(objectClass=posixAccount)(uid='"\$1"')(ludoucredit>=1))' 'sshPublicKey' | sed -n '/^ /{H;d};/sshPublicKey:/x;\$g;s/\\n *//g;s/sshPublicKey: //gp'
 EOF
 chmod +x /etc/ldap-key-auth.sh
 cp -f sshd_config /etc/ssh/sshd_config

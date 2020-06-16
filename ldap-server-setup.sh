@@ -135,7 +135,7 @@ uidNumber: 3000
 gidNumber: 3000
 ludouCredit: 100
 userPassword: $wgkey
-sshPublicKey: $takey 
+sshPublicKey: $takey
 loginShell: /bin/bash
 homeDirectory: /home/TA
 
