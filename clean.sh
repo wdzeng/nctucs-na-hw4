@@ -1,9 +1,12 @@
 #!/bin/bash
 set -e
 
+if [[ $# -ne 1 ]]; then 
+  >&2 echo './clean.sh <student_id>'
+  exit 1
+fi
+sid=$1
+
 DEBIAN_FRONTEND=noninteractive apt remove --purge -y ldap-utils slapd libpam-ldap libnss-ldap nslcd nscd oathtool
 apt autoremove -y
-sleep 2
-rm -rf /etc/ldap
-rm -rf /var/lib/ldap
-rm -f totppasswd.sh
+rm -rf /etc/ldap /var/lib/ldap /home/totp /home/TA /home/taipeirioter /home/$sid  totppasswd.sh
