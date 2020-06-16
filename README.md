@@ -24,6 +24,11 @@ cd ~/nahw4
 sudo ./ws1.sh <student_id> <wireguard_key>
 ```
 
+## Post-install
+Before submitting, be sure you have configure the firewall properly:
+- Open udp:snmp to intranet
+- Open {tcp,udp}:ldap to intranet
+
 ## Clean
 If for some reason you fail and you want to rerun the scirpt, you should clean your environment before retrying.
 ```
