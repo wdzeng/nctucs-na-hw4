@@ -22,7 +22,7 @@ fi
 cp .ldap.key.pem  /etc/ldap/certs/key.pem
 cp .ldap.cert.pem /etc/ldap/certs/cert.pem
 chown openldap /etc/ldap/certs/{key,cert}.pem
-ln -sf /etc/ldap/certs/cert.pem /etc/ssl/ldap.pem
+ln -sf /etc/ldap/certs/cert.pem /etc/ssl/certs/ldap.pem
 
 cp pw-totp/* /usr/lib/ldap/
 
