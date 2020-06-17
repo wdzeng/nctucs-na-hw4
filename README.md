@@ -25,12 +25,12 @@ sudo ./ws1.sh <student_id>
 ```
 
 ## Post-install
-Before submitting, be sure you have configure the firewall properly:
+Before submitting, be sure you have configured the firewall properly:
 - Open tcp:ldap and udp:ldap from intranet to both ws1 and ldap1
 - Open udp:snmp from intranet to ws1
 
 ## Clean
-If for some reason you fail and you want to rerun the scirpt, you should clean your environment before retrying.
+If for some reason you fail and want to rerun the scirpt, you should clean your environment before retrying.
 ```
 cd ~/nahw4
 sudo ./clean.sh <student_id>
