@@ -21,7 +21,7 @@ You must have A records pointting to ldap1.0716xxx.nasa, ws1.0716xxx.nasa and ce
 
 ```
 cd ~/nahw4
-sudo ./ws1.sh <student_id> <wireguard_key>
+sudo ./ws1.sh <student_id>
 ```
 
 ## Post-install
