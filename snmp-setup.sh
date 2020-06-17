@@ -15,7 +15,7 @@ fi
 
 
 apt update -y
-apt install -y snmpd wget
+apt install -y snmpd snmp snmp-mibs-downloader curl
 #apt install -y snmp libsnmp-dev
 
 cp -f snmpd.conf /etc/snmp/snmpd.conf
@@ -23,7 +23,7 @@ sed -i s/@ID@/$wid/ /etc/snmp/snmpd.conf
 
 cat > /usr/local/bin/i_love_yca.sh <<EOF
 #!/bin/bash
-wget -q --spider agent.$sid.nasa
+curl agent.$sid.nasa:5566 > /dev/null 2>&1
 EOF
 chmod +x /usr/local/bin/i_love_yca.sh
 
