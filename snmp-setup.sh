@@ -1,18 +1,12 @@
 #!/bin/bash
 set -e
 
-if [[ $# -ne 1 ]]; then
-  >&2 echo './snmp-setup.sh <student_id>'
-  exit 1
-fi
-
 sid=$1
 wid=$(dig agent.$sid.nasa +short | awk '-F.' '{print $3}')
 if [[ -z $wid ]]; then
   >&2 echo 'Cannot find your agent IP.'
   exit 1
 fi
-
 
 apt update -y
 apt install -y snmpd snmp snmp-mibs-downloader curl
