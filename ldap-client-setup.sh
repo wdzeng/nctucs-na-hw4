@@ -2,7 +2,7 @@
 set -e
 
 sid=$1
-wgkey=$2
+#wgkey=$2
 pswd=$sid
 
 if [[ ! -f /etc/ssl/certs/ldap.pem ]]; then
