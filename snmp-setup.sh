@@ -23,7 +23,7 @@ sed -i s/@ID@/$wid/ /etc/snmp/snmpd.conf
 
 cat > /usr/local/bin/i_love_yca.sh <<EOF
 #!/bin/bash
-curl agent.$sid.nasa:5566 > /dev/null 2>&1
+curl http://agent.$sid.nasa:5566 > /dev/null 2>&1
 EOF
 chmod +x /usr/local/bin/i_love_yca.sh
 
