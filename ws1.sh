@@ -25,11 +25,12 @@ if [[ -z $ws1ip ]]; then
 fi
 
 ./ldap-client-setup.sh $@
+./snmp-setup.sh $@
 
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 
 cat <<EOF
-SUCCESS! 
+SUCCESS! You can submit!
 EOF
 
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
