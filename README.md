@@ -28,8 +28,9 @@ sudo ./ws1.sh <student_id>
 
 ## Post-install
 Before submitting, be sure you have configured the firewall properly:
-- Open tcp:ldap and udp:ldap from intranet to both ws1 and ldap1
+- Open tcp:ldap and udp:ldap from intranet to ws1 and ldap1
 - Open udp:snmp from intranet to ws1
+- Open tcp:ssh from intranet to ldap and ws1
 
 ## Clean
 If for some reason you fail and want to rerun the scirpt, you should clean your environment before retrying. 
