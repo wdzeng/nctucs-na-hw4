@@ -15,7 +15,7 @@ sid=$1
 wgkey=$2
 ldap1ip=$(dig +short ldap1.${sid}.nasa)
 if [[ -z $ldap1ip ]]; then
-  echo ldap1.$sid.nasa IP not found.
+  >&2 echo ldap1.$sid.nasa IP not found.
   exit 1
 fi
 
