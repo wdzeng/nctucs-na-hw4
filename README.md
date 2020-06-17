@@ -4,7 +4,7 @@ Please prepare a clean Ubuntu OS 18.04.
 Clone this repo to your home dir (or somewhere else, but in this tutorial we take home dir for example).
 
 ## ldap1 setup
-You must have A records pointing to ldap1.0716xxx.nasa and ws1.0716xxx.nasa; otherwise you cannot run this script.
+You must have A records pointing to ldap1.0716xxx.nasa; otherwise you cannot run this script.
 
 ```
 cd ~/nahw4
@@ -19,7 +19,7 @@ If the script generates new key and certificate, they will be at ~/nahw4/.ldap.k
 If you are not running this script for the first time, the script uses the the cert generated at the first run.
 
 ## ws1 setup
-You must have A records pointing to ldap1.0716xxx.nasa, ws1.0716xxx.nasa and agent.0716xxx.nasa and TXT record to cert.0716xxx.nasa; otherwise you cannot run this script.
+You must have A records pointing to ldap1.0716xxx.nasa and agent.0716xxx.nasa and TXT record to cert.0716xxx.nasa; otherwise you cannot run this script.
 
 ```
 cd ~/nahw4
