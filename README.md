@@ -4,7 +4,7 @@ Please prepare a clean Ubuntu OS 18.04.
 Clone this repo to your home dir (or somewhere else, but in this tutorial we take home dir for example).
 
 ## ldap1 setup
-You must have A records pointting to ldap1.0716xxx.nasa and ws1.0716xxx.nasa; otherwise you cannot run this script.
+You must have A records pointing to ldap1.0716xxx.nasa and ws1.0716xxx.nasa; otherwise you cannot run this script.
 
 ```
 cd ~/nahw4
